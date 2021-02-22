@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy navigation</title>
+
+    <style>
+      nav {
+        background-color: #333;
+        padding: 40px;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+      }
+
+      ul li {
+        position: relative;
+        display: inline-block;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+
+      a::before {
+        content: "";
+        display: block;
+        height: 6px;
+        background-color: yellow;
+        position: absolute;
+        top: -20px;
+        width: 0%;
+
+        transition: all ease-in-out 250ms;
+      }
+
+      a:hover {
+        color: yellow;
+      }
+
+      a:hover::before {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Forsiden</a></li>
+        <li><a href="#">Om os</a></li>
+        <li><a href="#">Produkter</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Log ind</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
